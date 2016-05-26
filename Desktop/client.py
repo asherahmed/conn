@@ -17,5 +17,7 @@ s.connect((host, port))
 start_new_thread(receiveData, (None,))
 while True:
 	reply = raw_input()
+	if reply=='quit':
+		break
 	s.send(reply)
 s.close                     # Close the socket when done
